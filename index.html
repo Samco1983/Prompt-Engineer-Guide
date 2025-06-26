@@ -9,17 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Warm Neutrals -->
-    <!-- Application Structure Plan: A dashboard-style single-page application designed to explore the provided AI Landscape Report. The structure is thematic and organized for easy exploration: it begins with a high-level "Pulse Check" and "Breakthroughs" section to set the context, followed by deep dives into "Prompt Engineering" (how to interact), "AI Toolkit" (what tools are available), "AI in Action" (practical applications), and finally "Community Hubs" (where to connect). This structure prioritizes immediate understanding and allows users to navigate directly to areas of interest, rather than following the linear flow of the original report. -->
-    <!-- Visualization & Content Choices: 
-        - AI Research Growth: Report Info -> Unprecedented growth in conference submissions. Goal -> Visualize this acceleration. Viz -> Chart.js Bar Chart. Interaction -> Hover tooltips. Justification -> Visually impactful for showing rapid trends. Library -> Chart.js.
-        - AI Breakthrough Highlights: Report Info -> Key areas like LLMs, Generative AI, AI Agents, Scientific Discovery. Goal -> Present key concepts concisely. Viz -> Text cards with prominent icons/emojis. Interaction -> Static display for quick overview. Justification -> Efficiently conveys core ideas. Library -> HTML/CSS.
-        - Prompt Engineering Techniques: Report Info -> Foundational, Few-shot, CoT, Self-Ask, Action Verbs. Goal -> Teach complex concepts via interactive comparison. Viz -> Interactive tabs with detailed examples. Interaction -> Click to switch tabs. Justification -> Organizes distinct, related concepts clearly without overwhelming the user. Library -> JS.
-        - AI Tool Directory: Report Info -> Extensive list of AI tools across categories. Goal -> Create an explorable, non-overwhelming directory. Viz -> Filterable grid of cards. Interaction -> Category filter buttons. Justification -> Standard, highly usable UI for large datasets, allowing users to find specific tools quickly. Library -> JS.
-        - AI in Action (Communication, Tools, Prompting): Report Info -> Innovative real-world uses. Goal -> Illustrate practical applications. Viz -> Accordion/expandable sections with descriptive text. Interaction -> Click to expand/collapse. Justification -> Allows users to selectively delve into detailed use cases. Library -> JS.
-        - Community Hubs: Report Info -> List of Discord, Reddit, and Web Forums. Goal -> Provide accessible links and descriptions. Viz -> List of cards. Interaction -> Static display. Justification -> Simple, direct presentation of contact information. Library -> HTML/CSS.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -143,8 +132,7 @@
             </div>
 
             <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="breakthrough-highlights">
-                <!-- Breakthrough highlights will be rendered here by JS -->
-            </div>
+                </div>
         </section>
 
         <section id="prompts" class="py-12 md:py-20 scroll-mt-20 bg-gray-100/70 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
@@ -186,8 +174,7 @@
                 <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">AI tools are not just standalone applications; they are being innovatively combined and leveraged to transform how we communicate, create new solutions, and engineer sophisticated interactions. This section highlights real-world examples and practical applications across various sectors.</p>
             </div>
             <div id="inaction-container" class="max-w-4xl mx-auto space-y-6">
-                <!-- AI in Action content will be rendered here by JS -->
-            </div>
+                </div>
         </section>
 
         <section id="community" class="py-12 md:py-20 scroll-mt-20">
@@ -196,8 +183,7 @@
                 <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Staying abreast of the rapidly evolving AI landscape necessitates engagement with vibrant and active online communities. These platforms serve as vital hubs for sharing news, discussing breakthroughs, exchanging prompt engineering tips, and collaborating on projects. Join the conversation and accelerate your learning!</p>
             </div>
             <div id="community-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Communities will be rendered here by JS -->
-            </div>
+                </div>
         </section>
 
     </main>
@@ -218,57 +204,57 @@
                 },
                 breakthroughHighlights: [
                     { icon: '🧠', title: 'Pervasive LLMs', description: 'Large Language Models are doing complex, knowledge-intensive work, processing massive documents with up to 2-million-token context windows.' },
-                    { icon: '�', title: 'Generative AI Revolution', description: 'Text-to-image, video, and music generation tools are democratizing creativity, turning AI into a creative partner.' },
+                    { icon: '🎨', title: 'Generative AI Revolution', description: 'Text-to-image, video, and music generation tools are democratizing creativity, turning AI into a creative partner.' },
                     { icon: '🤖', title: 'Rise of AI Agents', description: 'Autonomous agents (e.g., Google Gemini Agents, Microsoft Copilot) interpret goals and carry out multi-step tasks across applications.' },
                     { icon: '🔬', title: 'Scientific Discovery', description: 'AI is revolutionizing fields like protein design (e.g., AlphaFold2), accelerating drug discovery and optimizing enzyme design.' },
                     { icon: '💡', title: 'New LLM Architectures', description: 'Powerful models like GPT-4.5, Claude 3.7 Sonnet, Gemini 1.5 Pro are emerging with significantly larger context windows.' },
                     { icon: '🚀', title: 'Rapid Skill Shift', description: 'The constant change in top research keywords (17% annually) demands continuous learning and adaptable AI infrastructures.' }
                 ],
                 tools: [
-                    { name: 'ChatGPT', category: 'Chatbot', description: 'Powered by GPT-4o, generates human-like text responses for content creation, research, and support.' },
-                    { name: 'Claude', category: 'Chatbot', description: 'Safe and creative chatbot that can build interfaces, write documents, or design games.' },
-                    { name: 'Perplexity', category: 'AI Search', description: 'High-quality AI search engine providing answers with excellent source quoting.' },
-                    { name: 'Meta AI', category: 'Chatbot', description: 'Integrates AI features across Facebook, Instagram, WhatsApp, enabling image and short animation generation.'},
-                    { name: 'Google AI Overviews', category: 'AI Search', description: 'Provides AI-generated summaries of top search results alongside traditional listings in Google Search.'},
-                    { name: 'Arc Search', category: 'AI Search', description: 'Integrates AI features directly into the search experience, summarizing top results into structured answers.'},
-                    { name: 'DALL-E 3', category: 'Image Gen', description: 'Converts written prompts into high-quality visual images, integrated into ChatGPT.' },
-                    { name: 'Midjourney', category: 'Image Gen', description: 'A leading AI image generator known for its artistic and highly detailed outputs.' },
-                    { name: 'Ideogram', category: 'Image Gen', description: 'Noted for its ability to generate accurate text within images, along with high-quality image generation.'},
-                    { name: 'Runway', category: 'Video Gen', description: 'AI video generation and editing tools, including text-to-video and frame manipulation (Gen-3 Alpha model).' },
-                    { name: 'Descript', category: 'Video Gen', description: 'Transcribes video into editable text, simplifying video editing and content creation.'},
-                    { name: 'Wondershare Filmora', category: 'Video Gen', description: 'Integrates AI for background removal, denoising, and sound quality improvement in video editing.'},
-                    { name: 'ElevenLabs', category: 'Audio Gen', description: 'High-quality multilingual text-to-speech, voice cloning, and AI dubbing.' },
-                    { name: 'Suno', category: 'Audio Gen', description: 'Enables AI-generated music, complete with lyrics and varied compositions.'},
-                    { name: 'AIVA', category: 'Audio Gen', description: 'AI music composer that generates original soundtracks for various media projects.'},
-                    { name: 'Grammarly', category: 'Text Enhance', description: 'Reviews writing for grammar, spelling, word choice, and tone of voice.' },
-                    { name: 'Jasper', category: 'Text Gen', description: 'Powerful platform for high-volume marketing content creation, with templates and research capabilities.'},
-                    { name: 'Anyword', category: 'Text Gen', description: 'Assists marketers with step-by-step content creation, from titles to outlines, driven by AI.'},
-                    { name: 'Writer', category: 'Text Gen', description: 'Caters to large businesses, using proprietary LLMs to ensure content accuracy, compliance, and consistent brand voice.'},
-                    { name: 'Wordtune', category: 'Text Enhance', description: 'Helps users find alternative wordings and sentence rewrites for improved clarity and style.'},
-                    { name: 'ProWritingAid', category: 'Text Enhance', description: 'Offers advanced grammar and style analysis, readability reports, and plagiarism checks.'},
-                    { name: 'Otter.ai', category: 'Automation', description: 'AI-powered transcription of audio/video, perfect for recapping meetings and creating action items.' },
-                    { name: 'Zapier Agents', category: 'Automation', description: 'Train AI agents to work across thousands of apps with a simple chatbot interface for automated workflows.' },
-                    { name: 'Google Gemini Agents', category: 'Automation', description: 'Gemini-powered agents embedded across industries, handling customer queries, scanning spreadsheets, and more.'},
-                    { name: 'IBM watsonx Orchestrate', category: 'Automation', description: 'No-code platform for building AI agents to automate routine business tasks at scale.'},
-                    { name: 'Microsoft Copilot & Azure AI Agents', category: 'Automation', description: 'AI agents embedded into Microsoft products and Azure services to automate complex tasks and workflows.'},
-                    { name: 'ClickUp', category: 'Project Mgmt', description: 'AI-driven project management with a personal assistant for organizing workflows, tasks, and goals.' },
-                    { name: 'Taskade', category: 'Project Mgmt', description: 'Allows users to build and deploy AI agents for planning itineraries, developing presentations, and creating knowledge bases.'},
-                    { name: 'LangChain', category: 'AI Framework', description: 'Open-source framework for building applications that connect LLMs to external data and APIs.' },
-                    { name: 'LangGraph', category: 'AI Framework', description: 'Built on LangChain, organizes AI tasks using a graph-based structure for multi-agent collaboration.'},
-                    { name: 'AG2 (formerly AutoGen)', category: 'AI Framework', description: 'An AI tool for summarizing, data handling, and facilitating teamwork with natural language automation.'},
-                    { name: 'CrewAI', category: 'AI Framework', description: 'Framework for creating teams of AI agents with specific roles, memory support, and autonomous decision-making.' },
-                    { name: 'Phoenix', category: 'AI Framework', description: 'Monitors and improves AI systems by providing insights into model behavior and errors for text and image AI.'},
-                    { name: 'SageMaker', category: 'AI Framework', description: 'Amazon AWS cloud-based ML platform for building, training, and deploying machine learning models.'},
-                    { name: 'Mem0', category: 'Productivity', description: 'AI-powered smart note-taking app functioning as a "second brain," linking notes and tasks with AI summaries.'},
-                    { name: 'Langfuse', category: 'Productivity', description: 'Tool for tracking the performance of AI applications, offering prompt versioning and live feedback.'},
-                    { name: 'GitHub Copilot', category: 'Dev Tool', description: 'AI-powered coding assistant that suggests code in real-time within your editor.' },
-                    { name: 'Qodo', category: 'Dev Tool', description: 'Provides precise code suggestions, automated test generation, and pull request reviews (Qodo Merge).' },
-                    { name: 'Tabnine', category: 'Dev Tool', description: 'AI code completion tool that provides suggestions based on context and predicts common patterns.'},
-                    { name: 'Amazon CodeWhisperer', category: 'Dev Tool', description: 'AI coding companion that generates code suggestions in real-time based on natural language comments or existing code.'},
-                    { name: 'Sourcegraph Cody', category: 'Dev Tool', description: 'AI coding assistant that uses a large language model to help developers write, review, and fix code faster.'}
+                    { name: 'ChatGPT', category: 'Chatbot', description: 'Powered by GPT-4o, generates human-like text responses for content creation, research, and support.', url: 'https://chatgpt.com/' },
+                    { name: 'Claude', category: 'Chatbot', description: 'Safe and creative chatbot that can build interfaces, write documents, or design games.', url: 'https://claude.ai/' },
+                    { name: 'Perplexity', category: 'AI Search', description: 'High-quality AI search engine providing answers with excellent source quoting.', url: 'https://www.perplexity.ai/' },
+                    { name: 'Meta AI', category: 'Chatbot', description: 'Integrates AI features across Facebook, Instagram, WhatsApp, enabling image and short animation generation.', url: 'https://ai.meta.com/'},
+                    { name: 'Google AI Overviews', category: 'AI Search', description: 'Provides AI-generated summaries of top search results alongside traditional listings in Google Search.', url: 'https://blog.google/products/search/generative-ai-search-sge-update/'},
+                    { name: 'Arc Search', category: 'AI Search', description: 'Integrates AI features directly into the search experience, summarizing top results into structured answers.', url: 'https://arc.net/features/arc-search'},
+                    { name: 'DALL-E 3', category: 'Image Gen', description: 'Converts written prompts into high-quality visual images, integrated into ChatGPT.', url: 'https://openai.com/dall-e-3'},
+                    { name: 'Midjourney', category: 'Image Gen', description: 'A leading AI image generator known for its artistic and highly detailed outputs.', url: 'https://www.midjourney.com/'},
+                    { name: 'Ideogram', category: 'Image Gen', description: 'Noted for its ability to generate accurate text within images, along with high-quality image generation.', url: 'https://ideogram.ai/'},
+                    { name: 'Runway', category: 'Video Gen', description: 'AI video generation and editing tools, including text-to-video and frame manipulation (Gen-3 Alpha model).', url: 'https://runwayml.com/'},
+                    { name: 'Descript', category: 'Video Gen', description: 'Transcribes video into editable text, simplifying video editing and content creation.', url: 'https://www.descript.com/'},
+                    { name: 'Wondershare Filmora', category: 'Video Gen', description: 'Integrates AI for background removal, denoising, and sound quality improvement in video editing.', url: 'https://filmora.wondershare.com/'},
+                    { name: 'ElevenLabs', category: 'Audio Gen', description: 'High-quality multilingual text-to-speech, voice cloning, and AI dubbing.', url: 'https://elevenlabs.io/'},
+                    { name: 'Suno', category: 'Audio Gen', description: 'Enables AI-generated music, complete with lyrics and varied compositions.', url: 'https://www.suno.ai/'},
+                    { name: 'AIVA', category: 'Audio Gen', description: 'AI music composer that generates original soundtracks for various media projects.', url: 'https://www.aiva.ai/'},
+                    { name: 'Grammarly', category: 'Text Enhance', description: 'Reviews writing for grammar, spelling, word choice, and tone of voice.', url: 'https://www.grammarly.com/'},
+                    { name: 'Jasper', category: 'Text Gen', description: 'Powerful platform for high-volume marketing content creation, with templates and research capabilities.', url: 'https://www.jasper.ai/'},
+                    { name: 'Anyword', category: 'Text Gen', description: 'Assists marketers with step-by-step content creation, from titles to outlines, driven by AI.', url: 'https://anyword.com/'},
+                    { name: 'Writer', category: 'Text Gen', description: 'Caters to large businesses, using proprietary LLMs to ensure content accuracy, compliance, and consistent brand voice.', url: 'https://writer.com/'},
+                    { name: 'Wordtune', category: 'Text Enhance', description: 'Helps users find alternative wordings and sentence rewrites for improved clarity and style.', url: 'https://www.wordtune.com/'},
+                    { name: 'ProWritingAid', category: 'Text Enhance', description: 'Offers advanced grammar and style analysis, readability reports, and plagiarism checks.', url: 'https://prowritingaid.com/'},
+                    { name: 'Otter.ai', category: 'Automation', description: 'AI-powered transcription of audio/video, perfect for recapping meetings and creating action items.', url: 'https://otter.ai/'},
+                    { name: 'Zapier Agents', category: 'Automation', description: 'Train AI agents to work across thousands of apps with a simple chatbot interface for automated workflows.', url: 'https://zapier.com/ai/agents'},
+                    { name: 'Google Gemini Agents', category: 'Automation', description: 'Gemini-powered agents embedded across industries, handling customer queries, scanning spreadsheets, and more.', url: 'https://blog.google/products/ai/google-gemini-ai-agents/'},
+                    { name: 'IBM watsonx Orchestrate', category: 'Automation', description: 'No-code platform for building AI agents to automate routine business tasks at scale.', url: 'https://www.ibm.com/products/watsonx-orchestrate'},
+                    { name: 'Microsoft Copilot & Azure AI Agents', category: 'Automation', description: 'AI agents embedded into Microsoft products and Azure services to automate complex tasks and workflows.', url: 'https://www.microsoft.com/en-us/microsoft-copilot'},
+                    { name: 'ClickUp', category: 'Project Mgmt', description: 'AI-driven project management with a personal assistant for organizing workflows, tasks, and goals.', url: 'https://clickup.com/'},
+                    { name: 'Taskade', category: 'Project Mgmt', description: 'Allows users to build and deploy AI agents for planning itineraries, developing presentations, and creating knowledge bases.', url: 'https://www.taskade.com/'},
+                    { name: 'LangChain', category: 'AI Framework', description: 'Open-source framework for building applications that connect LLMs to external data and APIs.', url: 'https://www.langchain.com/'},
+                    { name: 'LangGraph', category: 'AI Framework', description: 'Built on LangChain, organizes AI tasks using a graph-based structure for multi-agent collaboration.', url: 'https://python.langchain.com/v0.2/docs/concepts/#langgraph'},
+                    { name: 'AG2 (formerly AutoGen)', category: 'AI Framework', description: 'An AI tool for summarizing, data handling, and facilitating teamwork with natural language automation.', url: 'https://microsoft.github.io/autogen/'},
+                    { name: 'CrewAI', category: 'AI Framework', description: 'Framework for creating teams of AI agents with specific roles, memory support, and autonomous decision-making.', url: 'https://www.crewai.com/'},
+                    { name: 'Phoenix', category: 'AI Framework', description: 'Monitors and improves AI systems by providing insights into model behavior and errors for text and image AI.', url: 'https://www.arize.com/phoenix/'},
+                    { name: 'SageMaker', category: 'AI Framework', description: 'Amazon AWS cloud-based ML platform for building, training, and deploying machine learning models.', url: 'https://aws.amazon.com/sagemaker/'},
+                    { name: 'Mem0', category: 'Productivity', description: 'AI-powered smart note-taking app functioning as a "second brain," linking notes and tasks with AI summaries.', url: 'https://mem0.ai/'},
+                    { name: 'Langfuse', category: 'Productivity', description: 'Tool for tracking the performance of AI applications, offering prompt versioning and live feedback.', url: 'https://langfuse.com/'},
+                    { name: 'GitHub Copilot', category: 'Dev Tool', description: 'AI-powered coding assistant that suggests code in real-time within your editor.', url: 'https://copilot.github.com/'},
+                    { name: 'Qodo', category: 'Dev Tool', description: 'Provides precise code suggestions, automated test generation, and pull request reviews (Qodo Merge).', url: 'https://qodo.ai/'},
+                    { name: 'Tabnine', category: 'Dev Tool', description: 'AI code completion tool that provides suggestions based on context and predicts common patterns.', url: 'https://www.tabnine.com/'},
+                    { name: 'Amazon CodeWhisperer', category: 'Dev Tool', description: 'AI coding companion that generates code suggestions in real-time based on natural language comments or existing code.', url: 'https://aws.amazon.com/codewhisperer/'},
+                    { name: 'Sourcegraph Cody', category: 'Dev Tool', description: 'AI coding assistant that uses a large language model to help developers write, review, and fix code faster.', url: 'https://sourcegraph.com/cody'}
                 ],
                 promptingTechniques: [
-                    { 
+                    {
                         name: 'Foundations',
                         content: `
                             <p class="text-gray-600 mb-6">Good prompting starts with clear, specific instructions. Think of it like giving directions: the more precise you are, the better the result. Place instructions at the beginning, separate them from context with delimiters (e.g., <code>###</code>, <code>"""</code>), and be descriptive about desired outcomes, length, format, and style.</p>
@@ -347,276 +333,282 @@
                             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                                 <h4 class="font-bold text-gray-800">Try these powerful verbs in your prompts:</h4>
                                 <div class="mt-4 flex flex-wrap gap-3" id="action-verbs-container">
-                                    <!-- Verbs will be populated by JS -->
-                                </div>
+                                    </div>
                             </div>
-                        `
-                    }
-                ],
-                actionVerbs: ["Analyze", "Compare", "Explain", "Summarize", "Critique", "Synthesize", "Propose", "Illustrate", "Reflect", "Interpret", "Justify", "Investigate", "Debate", "Predict"],
-                aiInActionContent: [
-                    {
-                        title: 'AI Tools Enhancing Communication',
-                        content: `<p class="text-gray-600">AI is fundamentally reshaping communication, making it faster, more efficient, and more personalized. This includes instant customer service via AI agents (Zendesk, Zohodesk), enhanced writing with tools like Grammarly and ChatGPT for generating drafts, and AI email assistants (TryEllie) learning user styles. Meeting management tools like Otter.ai and Notta provide AI-powered transcriptions, summaries, and real-time multilingual translation, improving collaboration.</p>`
-                    },
-                    {
-                        title: 'AI for Creating Tools and Automating Workflows',
-                        content: `<p class="text-gray-600">The capability of AI to generate and refine code, coupled with the emergence of AI agents, is fundamentally changing how tools are created and how workflows are automated. AI coding assistants (Qodo, GitHub Copilot) accelerate development of new software. Autonomous AI agents (Zapier Agents, Google Gemini Agents, IBM watsonx Orchestrate) interpret complex goals and carry out multi-step tasks across applications, orchestrating entire workflows without coding. No-code builders like Glide also integrate AI agents for custom app creation.</p>`
-                    },
-                    {
-                        title: 'Practical Applications of Prompt Engineering',
-                        content: `<p class="text-gray-600">Prompt engineering is the critical skill that underpins the effective utilization of AI tools. It involves tailoring communication (ChatGPT, Jasper) for specific audiences, directing creative output (DALL-E, Midjourney) for unique visuals, and engineering agent behavior. For AI agents and coding assistants, precise prompts dictate their performance, ensuring accurate code generation, comprehensive test cases, and efficient workflow execution. Techniques like Chain of Thought and Self-Ask prompting are vital for transparent and debuggable agent behavior.</p>`
-                    }
-                ],
-                communities: [
-                    { name: 'OpenAI', platform: 'Discord, Developer Forum', description: 'Official server and forum for ChatGPT, Sora, DALL-E, API usage, prompt engineering, and product updates.' },
-                    { name: 'DigitalOcean', platform: 'Discord', description: 'Community for GenAI platforms, GPU droplets, AI projects, coding livestreams, and tutorials.' },
-                    { name: 'Anthropic', platform: 'Discord', description: 'For Claude.ai users, discussing applications with Anthropic API, prompt feedback, and model changes.' },
-                    { name: 'Hugging Face', platform: 'Discord, Forums', description: 'Community for ML users, discussing ethics, open-source ML, computer vision, NLP, and datasets.' },
-                    { name: 'Midjourney', platform: 'Discord', description: 'Dedicated to image creation from text prompts, prompt crafting, and digital art showcase.' },
-                    { name: 'Learn Prompting', platform: 'Discord', description: 'Focuses on maximizing ChatGPT outputs and building better AI prompt documentation and techniques.' },
-                    { name: 'r/MachineLearning', platform: 'Reddit', description: 'Highly active community for recent breakthroughs, research papers, and emerging trends.' },
-                    { name: 'r/AI & r/ArtificialIntelligence', platform: 'Reddit', description: 'General hubs for AI news, discussions, and updates on LLMs and agents.' },
-                    { name: 'r/AIPromptProgramming', platform: 'Reddit', description: 'Specific community dedicated to advanced prompt engineering discussions and strategies.' },
-                    { name: 'AI Forum X', platform: 'Web Forum', description: 'Beginner-friendly forum for deeper discussions on AI tools, AI art, AI music, and AI coding assistance.' },
-                    { name: 'Mistral AI', platform: 'Discord', description: 'Discussion space for Mistral AI users, providing channels for applications, prompts and support.'},
-                    { name: 'ElevenLabs', platform: 'Discord', description: 'Centered on AI-generated text-to-speech, providing documentation, product news, and work presentation.'},
-                    { name: 'OpenAI Developer Community', platform: 'Web Forum', description: 'Key resource for developers working with OpenAI\'s tools and APIs, with organized categories for usage and discussions.'},
-                    { name: 'Hugging Face Hub', platform: 'Web Forum', description: 'Integrated open-source AI ecosystem with active forums, models, datasets, and demo apps.'}
-                ]
-            };
+                        </div>
+                    `
+                }
+            ],
+            actionVerbs: ["Analyze", "Compare", "Explain", "Summarize", "Critique", "Synthesize", "Propose", "Illustrate", "Reflect", "Interpret", "Justify", "Investigate", "Debate", "Predict"],
+            aiInActionContent: [
+                {
+                    title: 'AI Tools Enhancing Communication',
+                    content: `<p class="text-gray-600">AI is fundamentally reshaping communication, making it faster, more efficient, and more personalized. This includes instant customer service via AI agents (<a href="https://www.zendesk.com/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Zendesk</a>, <a href="https://www.zoho.com/desk/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Zohodesk</a>), enhanced writing with tools like <a href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Grammarly</a> and <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">ChatGPT</a> for generating drafts, and AI email assistants (<a href="https://www.tryellie.com/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">TryEllie</a>) learning user styles. Meeting management tools like <a href="https://otter.ai/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Otter.ai</a> and <a href="https://notta.ai/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Notta</a> provide AI-powered transcriptions, summaries, and real-time multilingual translation, improving collaboration.</p>`
+                },
+                {
+                    title: 'AI for Creating Tools and Automating Workflows',
+                    content: `<p class="text-gray-600">The capability of AI to generate and refine code, coupled with the emergence of AI agents, is fundamentally changing how tools are created and how workflows are automated. AI coding assistants (<a href="https://qodo.ai/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Qodo</a>, <a href="https://copilot.github.com/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">GitHub Copilot</a>) accelerate development of new software. Autonomous AI agents (<a href="https://zapier.com/ai/agents" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Zapier Agents</a>, <a href="https://blog.google/products/ai/google-gemini-ai-agents/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Google Gemini Agents</a>, <a href="https://www.ibm.com/products/watsonx-orchestrate" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">IBM watsonx Orchestrate</a>) interpret complex goals and carry out multi-step tasks across applications, orchestrating entire workflows without coding. No-code builders like <a href="https://www.glideapps.com/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Glide</a> also integrate AI agents for custom app creation.</p>`
+                },
+                {
+                    title: 'Practical Applications of Prompt Engineering',
+                    content: `<p class="text-gray-600">Prompt engineering is the critical skill that underpins the effective utilization of AI tools. It involves tailoring communication (<a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">ChatGPT</a>, <a href="https://www.jasper.ai/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Jasper</a>) for specific audiences, directing creative output (<a href="https://openai.com/dall-e-3" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">DALL-E</a>, <a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Midjourney</a>) for unique visuals, and engineering agent behavior. For AI agents and coding assistants, precise prompts dictate their performance, ensuring accurate code generation, comprehensive test cases, and efficient workflow execution. Techniques like <a href="#prompts" class="text-orange-600 hover:underline">Chain of Thought</a> and <a href="#prompts" class="text-orange-600 hover:underline">Self-Ask</a> prompting are vital for transparent and debuggable agent behavior.</p>`
+                }
+            ],
+            communities: [
+                { name: 'OpenAI', platform: 'Discord, Developer Forum', description: 'Official server and forum for ChatGPT, Sora, DALL-E, API usage, prompt engineering, and product updates.', url: 'https://discord.com/invite/openai' },
+                { name: 'DigitalOcean', platform: 'Discord', description: 'Community for GenAI platforms, GPU droplets, AI projects, coding livestreams, and tutorials.', url: 'https://www.digitalocean.com/community/discord' },
+                { name: 'Anthropic', platform: 'Discord', description: 'For Claude.ai users, discussing applications with Anthropic API, prompt feedback, and model changes.', url: 'https://discord.com/invite/anthropic' },
+                { name: 'Hugging Face', platform: 'Discord, Forums', description: 'Community for ML users, discussing ethics, open-source ML, computer vision, NLP, and datasets.', url: 'https://huggingface.co/join/discord' },
+                { name: 'Midjourney', platform: 'Discord', description: 'Dedicated to image creation from text prompts, prompt crafting, and digital art showcase.', url: 'https://www.midjourney.com/' },
+                { name: 'Learn Prompting', platform: 'Discord', description: 'Focuses on maximizing ChatGPT outputs and building better AI prompt documentation and techniques.', url: 'https://learnprompting.org/discord' },
+                { name: 'r/MachineLearning', platform: 'Reddit', description: 'Highly active community for recent breakthroughs, research papers, and emerging trends.', url: 'https://www.reddit.com/r/MachineLearning/' },
+                { name: 'r/AI & r/ArtificialIntelligence', platform: 'Reddit', description: 'General hubs for AI news, discussions, and updates on LLMs and agents.', url: 'https://www.reddit.com/r/AI/' },
+                { name: 'r/AIPromptProgramming', platform: 'Reddit', description: 'Specific community dedicated to advanced prompt engineering discussions and strategies.', url: 'https://www.reddit.com/r/AIPromptProgramming/' },
+                { name: 'AI Forum X', platform: 'Web Forum', description: 'Beginner-friendly forum for deeper discussions on AI tools, AI art, AI music, and AI coding assistance.', url: 'https://www.aiforumx.com/' },
+                { name: 'Mistral AI', platform: 'Discord', description: 'Discussion space for Mistral AI users, providing channels for applications, prompts and support.', url: 'https://discord.com/invite/mistralai' },
+                { name: 'ElevenLabs', platform: 'Discord', description: 'Centered on AI-generated text-to-speech, providing documentation, product news, and work presentation.', url: 'https://discord.com/invite/elevenlabs' },
+                { name: 'OpenAI Developer Community', platform: 'Web Forum', description: 'Key resource for developers working with OpenAI\'s tools and APIs, with organized categories for usage and discussions.', url: 'https://community.openai.com/' },
+                { name: 'Hugging Face Hub', platform: 'Web Forum', description: 'Integrated open-source AI ecosystem with active forums, models, datasets, and demo apps.', url: 'https://huggingface.co/docs/hub/discussions' }
+            ]
+        };
 
-            const initApp = () => {
-                renderResearchChart();
-                renderBreakthroughHighlights();
-                renderPromptingTechniques();
-                renderTools();
-                renderInActionSections();
-                renderCommunities();
-                setupEventListeners();
-            };
+        const initApp = () => {
+            renderResearchChart();
+            renderBreakthroughHighlights();
+            renderPromptingTechniques();
+            renderTools();
+            renderInActionSections();
+            renderCommunities();
+            setupEventListeners();
+        };
 
-            const renderResearchChart = () => {
-                const ctx = document.getElementById('researchGrowthChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: appData.researchGrowth.labels,
-                        datasets: [{
-                            label: 'AI Conference Submissions',
-                            data: appData.researchGrowth.data,
-                            backgroundColor: 'rgba(249, 115, 22, 0.6)',
-                            borderColor: 'rgba(234, 88, 12, 1)',
-                            borderWidth: 1,
-                            borderRadius: 5,
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: { display: false },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        return ` Submissions: ${context.parsed.y}`;
-                                    }
+        const renderResearchChart = () => {
+            const ctx = document.getElementById('researchGrowthChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: appData.researchGrowth.labels,
+                    datasets: [{
+                        label: 'AI Conference Submissions',
+                        data: appData.researchGrowth.data,
+                        backgroundColor: 'rgba(249, 115, 22, 0.6)',
+                        borderColor: 'rgba(234, 88, 12, 1)',
+                        borderWidth: 1,
+                        borderRadius: 5,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ` Submissions: ${context.parsed.y}`;
                                 }
                             }
-                        },
-                        scales: {
-                            y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' } },
-                            x: { grid: { display: false } }
                         }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' } },
+                        x: { grid: { display: false } }
                     }
-                });
-            };
-
-            const renderBreakthroughHighlights = () => {
-                const container = document.getElementById('breakthrough-highlights');
-                container.innerHTML = appData.breakthroughHighlights.map(item => `
-                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200/50 text-center">
-                        <div class="text-4xl mb-3">${item.icon}</div>
-                        <h3 class="font-bold text-xl mb-2">${item.title}</h3>
-                        <p class="text-gray-600">${item.description}</p>
-                    </div>
-                `).join('');
-            };
-
-            const renderTools = (filter = 'All') => {
-                const container = document.getElementById('toolkit-container');
-                const filtersContainer = document.getElementById('tool-filters');
-
-                if (filtersContainer.innerHTML === '') {
-                    const categories = ['All', ...new Set(appData.tools.map(t => t.category))].sort();
-                    filtersContainer.innerHTML = categories.map(cat => `
-                        <button class="tool-filter-btn px-4 py-2 text-sm font-medium rounded-full transition ${filter === cat ? 'bg-orange-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}" data-filter="${cat}">
-                            ${cat}
-                        </button>
-                    `).join('');
                 }
+            });
+        };
 
-                const filteredTools = filter === 'All'
-                    ? appData.tools
-                    : appData.tools.filter(tool => tool.category === filter);
-                
-                container.innerHTML = filteredTools.map(tool => `
-                    <div class="tool-card bg-white p-6 rounded-2xl shadow-lg border border-gray-200/50 flex flex-col">
-                        <h4 class="font-bold text-xl text-gray-800">${tool.name}</h4>
-                        <p class="text-sm font-medium text-orange-600 mb-3">${tool.category}</p>
-                        <p class="text-gray-600 flex-grow">${tool.description}</p>
-                    </div>
-                `).join('');
-            };
-            
-            const renderPromptingTechniques = () => {
-                const techniques = appData.promptingTechniques;
-                const desktopTabs = document.getElementById('tabs-desktop');
-                const mobileSelect = document.getElementById('tabs-select');
-                const contentContainer = document.getElementById('prompting-technique-content');
+        const renderBreakthroughHighlights = () => {
+            const container = document.getElementById('breakthrough-highlights');
+            container.innerHTML = appData.breakthroughHighlights.map(item => `
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200/50 text-center">
+                    <div class="text-4xl mb-3">${item.icon}</div>
+                    <h3 class="font-bold text-xl mb-2">${item.title}</h3>
+                    <p class="text-gray-600">${item.description}</p>
+                </div>
+            `).join('');
+        };
 
-                desktopTabs.innerHTML = techniques.map((tech, index) => `
-                    <button class="prompt-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm ${index === 0 ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}" data-index="${index}">
-                        ${tech.name}
+        const renderTools = (filter = 'All') => {
+            const container = document.getElementById('toolkit-container');
+            const filtersContainer = document.getElementById('tool-filters');
+
+            if (filtersContainer.innerHTML === '') {
+                const categories = ['All', ...new Set(appData.tools.map(t => t.category))].sort();
+                filtersContainer.innerHTML = categories.map(cat => `
+                    <button class="tool-filter-btn px-4 py-2 text-sm font-medium rounded-full transition ${filter === cat ? 'bg-orange-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}" data-filter="${cat}">
+                        ${cat}
                     </button>
                 `).join('');
+            }
 
-                mobileSelect.innerHTML = techniques.map((tech, index) => `<option value="${index}">${tech.name}</option>`).join('');
-
-                const renderContent = (index) => {
-                    contentContainer.innerHTML = techniques[index].content;
-                    if (techniques[index].name === 'Action Verbs') {
-                        renderActionVerbs();
-                    }
-                };
-
-                const switchTab = (index) => {
-                    document.querySelectorAll('.prompt-tab').forEach(tab => {
-                        tab.classList.toggle('border-orange-500', tab.dataset.index == index);
-                        tab.classList.toggle('text-orange-600', tab.dataset.index == index);
-                        tab.classList.toggle('border-transparent', tab.dataset.index != index);
-                        tab.classList.toggle('text-gray-500', tab.dataset.index != index);
-                    });
-                    mobileSelect.value = index;
-                    renderContent(index);
-                };
-
-                desktopTabs.addEventListener('click', (e) => {
-                    if (e.target.matches('.prompt-tab')) {
-                        switchTab(e.target.dataset.index);
-                    }
-                });
-
-                mobileSelect.addEventListener('change', (e) => {
-                    switchTab(e.target.value);
-                });
-
-                renderContent(0);
-            };
-
-            const renderActionVerbs = () => {
-                const container = document.getElementById('action-verbs-container');
-                if(!container) return;
-                container.innerHTML = appData.actionVerbs.map(verb => `
-                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">${verb}</span>
-                `).join('');
-            };
-
-            const renderInActionSections = () => {
-                const container = document.getElementById('inaction-container');
-                container.innerHTML = appData.aiInActionContent.map((section, index) => `
-                    <div class="bg-white rounded-2xl shadow-lg border border-gray-200/50">
-                        <button class="accordion-button flex justify-between items-center w-full px-6 py-4 text-left text-lg font-semibold text-gray-800 rounded-t-2xl focus:outline-none" data-index="${index}">
-                            ${section.title}
-                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="accordion-content hidden px-6 pb-4 pt-2">
-                            ${section.content}
-                        </div>
-                    </div>
-                `).join('');
-
-                container.querySelectorAll('.accordion-button').forEach(button => {
-                    button.addEventListener('click', () => {
-                        const content = button.nextElementSibling;
-                        const svg = button.querySelector('svg');
-                        const isActive = button.classList.toggle('active');
-                        content.classList.toggle('hidden', !isActive);
-                        svg.classList.toggle('rotate-180', isActive);
-                        button.classList.toggle('rounded-b-none', isActive); // keep top corners rounded if active
-                    });
-                });
-            };
+            const filteredTools = filter === 'All'
+                ? appData.tools
+                : appData.tools.filter(tool => tool.category === filter);
             
-            const renderCommunities = () => {
-                const container = document.getElementById('community-container');
-                container.innerHTML = appData.communities.map(community => `
-                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200/50 flex flex-col">
-                        <h4 class="font-bold text-xl text-gray-800">${community.name}</h4>
-                        <p class="text-sm font-medium text-orange-600 mb-3">${community.platform}</p>
-                        <p class="text-gray-600 flex-grow">${community.description}</p>
-                    </div>
-                `).join('');
+            container.innerHTML = filteredTools.map(tool => `
+                <div class="tool-card bg-white p-6 rounded-2xl shadow-lg border border-gray-200/50 flex flex-col">
+                    <h4 class="font-bold text-xl text-gray-800">
+                        <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">
+                            ${tool.name}
+                        </a>
+                    </h4>
+                    <p class="text-sm font-medium text-orange-600 mb-3">${tool.category}</p>
+                    <p class="text-gray-600 flex-grow">${tool.description}</p>
+                </div>
+            `).join('');
+        };
+        
+        const renderPromptingTechniques = () => {
+            const techniques = appData.promptingTechniques;
+            const desktopTabs = document.getElementById('tabs-desktop');
+            const mobileSelect = document.getElementById('tabs-select');
+            const contentContainer = document.getElementById('prompting-technique-content');
+
+            desktopTabs.innerHTML = techniques.map((tech, index) => `
+                <button class="prompt-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm ${index === 0 ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}" data-index="${index}">
+                    ${tech.name}
+                </button>
+            `).join('');
+
+            mobileSelect.innerHTML = techniques.map((tech, index) => `<option value="${index}">${tech.name}</option>`).join('');
+
+            const renderContent = (index) => {
+                contentContainer.innerHTML = techniques[index].content;
+                if (techniques[index].name === 'Action Verbs') {
+                    renderActionVerbs();
+                }
             };
 
-            const setupEventListeners = () => {
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
+            const switchTab = (index) => {
+                document.querySelectorAll('.prompt-tab').forEach(tab => {
+                    tab.classList.toggle('border-orange-500', tab.dataset.index == index);
+                    tab.classList.toggle('text-orange-600', tab.dataset.index == index);
+                    tab.classList.toggle('border-transparent', tab.dataset.index != index);
+                    tab.classList.toggle('text-gray-500', tab.dataset.index != index);
                 });
+                mobileSelect.value = index;
+                renderContent(index);
+            };
 
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        const targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            if (mobileMenu.classList.contains('block')) {
-                                mobileMenu.classList.add('hidden');
-                            }
-                        }
-                    });
+            desktopTabs.addEventListener('click', (e) => {
+                if (e.target.matches('.prompt-tab')) {
+                    switchTab(e.target.dataset.index);
+                }
+            });
+
+            mobileSelect.addEventListener('change', (e) => {
+                switchTab(e.target.value);
+            });
+
+            renderContent(0);
+        };
+
+        const renderActionVerbs = () => {
+            const container = document.getElementById('action-verbs-container');
+            if(!container) return;
+            container.innerHTML = appData.actionVerbs.map(verb => `
+                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">${verb}</span>
+            `).join('');
+        };
+
+        const renderInActionSections = () => {
+            const container = document.getElementById('inaction-container');
+            container.innerHTML = appData.aiInActionContent.map((section, index) => `
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200/50">
+                    <button class="accordion-button flex justify-between items-center w-full px-6 py-4 text-left text-lg font-semibold text-gray-800 rounded-t-2xl focus:outline-none" data-index="${index}">
+                        ${section.title}
+                        <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content hidden px-6 pb-4 pt-2">
+                        ${section.content}
+                    </div>
+                </div>
+            `).join('');
+
+            container.querySelectorAll('.accordion-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const svg = button.querySelector('svg');
+                    const isActive = button.classList.toggle('active');
+                    content.classList.toggle('hidden', !isActive);
+                    svg.classList.toggle('rotate-180', isActive);
+                    button.classList.toggle('rounded-b-none', isActive); // keep top corners rounded if active
                 });
-                
-                const toolFiltersContainer = document.getElementById('tool-filters');
-                toolFiltersContainer.addEventListener('click', (e) => {
-                    if (e.target.matches('.tool-filter-btn')) {
-                        const filter = e.target.dataset.filter;
-                        document.querySelectorAll('.tool-filter-btn').forEach(btn => {
-                            btn.classList.toggle('bg-orange-600', btn === e.target);
-                            btn.classList.toggle('text-white', btn === e.target);
-                            btn.classList.toggle('bg-gray-200', btn !== e.target);
-                            btn.classList.toggle('text-gray-700', btn !== e.target);
-                        });
-                        renderTools(filter);
+            });
+        };
+        
+        const renderCommunities = () => {
+            const container = document.getElementById('community-container');
+            container.innerHTML = appData.communities.map(community => `
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200/50 flex flex-col">
+                    <h4 class="font-bold text-xl text-gray-800">
+                        <a href="${community.url}" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">
+                            ${community.name}
+                        </a>
+                    </h4>
+                    <p class="text-sm font-medium text-orange-600 mb-3">${community.platform}</p>
+                    <p class="text-gray-600 flex-grow">${community.description}</p>
+                </div>
+            `).join('');
+        };
+
+        const setupEventListeners = () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        if (mobileMenu.classList.contains('block')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+            
+            const toolFiltersContainer = document.getElementById('tool-filters');
+            toolFiltersContainer.addEventListener('click', (e) => {
+                if (e.target.matches('.tool-filter-btn')) {
+                    const filter = e.target.dataset.filter;
+                    document.querySelectorAll('.tool-filter-btn').forEach(btn => {
+                        btn.classList.toggle('bg-orange-600', btn === e.target);
+                        btn.classList.toggle('text-white', btn === e.target);
+                        btn.classList.toggle('bg-gray-200', btn !== e.target);
+                        btn.classList.toggle('text-gray-700', btn !== e.target);
+                    });
+                    renderTools(filter);
+                }
+            });
+
+            const navLinks = document.querySelectorAll('#nav-menu a, #mobile-menu a');
+            const sections = document.querySelectorAll('section[id]');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 120) {
+                        current = section.getAttribute('id');
                     }
                 });
 
-                const navLinks = document.querySelectorAll('#nav-menu a, #mobile-menu a');
-                const sections = document.querySelectorAll('section[id]');
-                window.addEventListener('scroll', () => {
-                    let current = '';
-                    sections.forEach(section => {
-                        const sectionTop = section.offsetTop;
-                        if (pageYOffset >= sectionTop - 120) {
-                            current = section.getAttribute('id');
-                        }
-                    });
-
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href').includes(current)) {
-                            link.classList.add('active');
-                        }
-                    });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
                 });
-            };
+            });
+        };
 
-            initApp();
-        });
-    </script>
-</body>
-</html>
-�
+        initApp();
+    });
+</script>
+
